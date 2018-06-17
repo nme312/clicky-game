@@ -1,5 +1,8 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
+import Card from "./components/FriendCard"
+import Wrapper from "./components/Wrapper"
+import Title from "./components/Title"
 
 class App extends Component {
   render() {
@@ -23,4 +26,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App
