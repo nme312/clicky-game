@@ -10,22 +10,39 @@ class App extends Component {
     cards
   }
 
+  clickChk = (id) => {
+    console.log(id)
+  }
+
   randomizer = () => {
-    console.log(this.state.cards.id)
+    // console.log(id)
+
+    
+  }
+  
+  getNewID = (id) => {
+    const arr = []
+    while (arr.length < 8) {
+      var randomnumber = Math.floor(Math.random() * 8) + 1;
+      if (arr.indexOf(randomnumber) > -1) continue;
+      arr[arr.length] = randomnumber;
+    }
+    return arr;
   }
 
   render() {
     return (
       <Wrapper>
-          <Title>Click Game</Title>
-          {this.state.cards.map(card => (
-            <GameCard
-              id={card.id}
-              key={card.id}
-              image={card.image}
-              randomizer={this.randomizer}
-            />
-          ))}
+        <Title>Click Game</Title>
+        {this.state.cards.map(card => (
+          <GameCard
+            id={card.id}
+            key={card.id}
+            image={card.image}
+            clickChk={this.clickChk}
+            randomizer={this.randomizer}
+          />
+        ))}
       </Wrapper>
     )
   }
