@@ -1,7 +1,7 @@
 import React from "react"
-import "./Card.css"
+import "./GameCard.css"
 
-const Card = props => (
+const GameCard = props => (
     <div className="card" id={props.id} onClick={() => props.randomizer()} >
         <div className="img-container">
             <img src={props.image} alt={props.name} />
@@ -9,4 +9,4 @@ const Card = props => (
     </div>
 )
 
-export default Card
+export default GameCard

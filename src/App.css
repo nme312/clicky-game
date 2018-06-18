@@ -1,9 +1,6 @@
-/* .card img {
-    width: 200px;
-    height: 200px;
-} */
-.card {
-    width: 20px;
-    height: 20px;
-    /* float: left; */
-}
+.title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  

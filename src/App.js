@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Card from "./components/Card"
+import GameCard from "./components/GameCard"
 import Wrapper from "./components/Wrapper"
 import Title from "./components/Title"
 import cards from "./cards.json"
@@ -17,15 +17,15 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Title>Click Game</Title>
-        {this.state.cards.map(card => (
-          <Card
-            id={card.id}
-            key={card.id}
-            image={card.image}
-            randomizer={this.randomizer}
-          />
-        ))}
+          <Title>Click Game</Title>
+          {this.state.cards.map(card => (
+            <GameCard
+              id={card.id}
+              key={card.id}
+              image={card.image}
+              randomizer={this.randomizer}
+            />
+          ))}
       </Wrapper>
     )
   }
