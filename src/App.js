@@ -6,18 +6,18 @@ import cards from "./cards.json"
 import './App.css'
 
 class App extends Component {
-  // state = {
-  //   cards
-  // }
+  state = {
+    cards
+  }
 
-  // clickChk = (id) => {
-  //   console.log(id)
-  // }
+  clickChk = (id) => {
+    console.log(id)
+  }
 
-  // remove = (array, element) => {
-  //   const index = array.indexOf(element);
-  //   array.splice(index, 1);
-  // }
+  remove = (array, element) => {
+    const index = array.indexOf(element);
+    array.splice(index, 1);
+  }
 
   // randomizer = () => {
   //   let oldArr = [...this.state.cards]
@@ -46,7 +46,7 @@ class App extends Component {
   // }
 
   randomizer = () => {
-    let oldArr = [...this.state.cards]
+    let oldArr = [...this.state.cards];
     var currentIndex = oldArr.length, temporaryValue, randomIndex;
 
     // While there remain elements to shuffle...
@@ -61,33 +61,29 @@ class App extends Component {
       oldArr[currentIndex] = oldArr[randomIndex];
       oldArr[randomIndex] = temporaryValue;
     }
+    console.log(oldArr);
 
-    return oldArr;
+    this.setState({ cards: oldArr })
   }
-}
 
 
-// render() {
-//   return (
-//       <Wrapper>
-//         <Title>Click Game</Title>
-//         {this.state.cards.map(card => (
-//           <GameCard
-//             id={card.id}
-//             key={card.id}
-//             image={card.image}
-//             clickChk={this.clickChk}
-//             randomizer={this.randomizer()}
-//           />
-//         ))}
-//       </Wrapper>
-//     )
-// }
 
-render() {
-  return (
-    <Title>Syntax Error</Title>
-  )
+  render() {
+    return (
+      <Wrapper>
+        <Title>Click Game</Title>
+        {this.state.cards.map(card => (
+          <GameCard
+            id={card.id}
+            key={card.id}
+            image={card.image}
+            clickChk={this.clickChk}
+            randomizer={this.randomizer}
+          />
+        ))}
+      </Wrapper>
+    )
+  }
 }
 
 export default App
