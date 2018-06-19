@@ -1,49 +1,33 @@
 import React, { Component } from 'react'
 import GameCard from "./components/GameCard"
-import Wrapper from "./components/Wrapper"
+import Container from "./components/Container"
+import Row from "./components/Row"
+import Header from "./components/Header"
 import Title from "./components/Title"
+import Scores from "./components/Scores"
+import Cards from "./components/Cards"
 import cards from "./cards.json"
 import './App.css'
 
 class App extends Component {
   state = {
-    cards
+    cards,
+    score: 0,
+    topScore: 0
+
   }
 
-  clickChk = (id) => {
-    console.log(id)
+  clickChk = (clicked) => {
+    if (!clicked) {
+      clicked = true;
+    }
+
   }
 
   remove = (array, element) => {
     const index = array.indexOf(element);
     array.splice(index, 1);
   }
-
-  // randomizer = () => {
-  //   let oldArr = [...this.state.cards]
-  //   console.log(oldArr)
-  //   const newArr = []
-  //   while (newArr.length < this.state.cards.length) {
-  //     let randomNum = Math.floor(Math.random() * this.state.cards.length)
-  //     console.log("Random Number");
-  //     console.log(randomNum);
-
-  //     console.log("oldArr [randomNum]");
-  //     console.log(oldArr[randomNum]);
-
-  //     console.log("oldArr");
-  //     console.log(oldArr);
-
-  //     newArr.push(oldArr[randomNum])
-
-  //     this.remove(oldArr, randomNum)
-
-  //     console.log("newArr");
-  //     console.log(newArr)
-
-  //     console.log("====================================================CYCLE LOOP==================================================");
-  //   }
-  // }
 
   randomizer = () => {
     let oldArr = [...this.state.cards];
@@ -66,22 +50,29 @@ class App extends Component {
     this.setState({ cards: oldArr })
   }
 
-
-
   render() {
     return (
-      <Wrapper>
-        <Title>Click Game</Title>
-        {this.state.cards.map(card => (
-          <GameCard
-            id={card.id}
-            key={card.id}
-            image={card.image}
-            clickChk={this.clickChk}
-            randomizer={this.randomizer}
-          />
-        ))}
-      </Wrapper>
+      <Container>
+        <Row>
+          <Header>
+            <Title>Clicky Game</Title>
+            <Scores>Score: {this.state.score} | Top Score: {this.state.topScore}</Scores>
+          </Header>
+        </Row>
+        <Row>
+          <Cards>
+            {this.state.cards.map(card => (
+              <GameCard
+                id={card.id}
+                key={card.id}
+                image={card.image}
+                clickChk={this.clickChk}
+                randomizer={this.randomizer}
+              />
+            ))}
+          </Cards>
+        </Row>
+      </Container>
     )
   }
 }

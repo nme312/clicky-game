@@ -1,50 +1,62 @@
 [
     {
         "id": 1,
-        "image": "https://img.buzzfeed.com/buzzfeed-static/static/2015-10/6/8/campaign_images/webdr07/someone-calculated-how-much-money-jim-spent-prank-2-3018-1444134583-0_dblbig.jpg"
+        "image": "https://img.buzzfeed.com/buzzfeed-static/static/2015-10/6/8/campaign_images/webdr07/someone-calculated-how-much-money-jim-spent-prank-2-3018-1444134583-0_dblbig.jpg",
+        "clicked": false
     },
     {
         "id": 2,
-        "image": "https://am22.akamaized.net/tms/cnt/uploads/2012/01/dwightschrute-220x252.jpg"
+        "image": "https://am22.akamaized.net/tms/cnt/uploads/2012/01/dwightschrute-220x252.jpg",
+        "clicked": false
     },
     {
         "id": 3,
-        "image": "https://img.buzzfeed.com/buzzfeed-static/static/campaign_images/webdr06/2013/4/30/12/23-signs-youre-the-stanley-of-your-office-1-20865-1367338782-12_big.jpg"
+        "image": "https://img.buzzfeed.com/buzzfeed-static/static/campaign_images/webdr06/2013/4/30/12/23-signs-youre-the-stanley-of-your-office-1-20865-1367338782-12_big.jpg",
+        "clicked": false
     },
     {
         "id": 4,
-        "image": "https://img.buzzfeed.com/buzzfeed-static/static/2016-07/22/18/campaign_images/buzzfeed-prod-fastlane01/michael-scott-quotes-that-are-still-hilarious-2-10277-1469225647-3_dblbig.jpg"
+        "image": "https://img.buzzfeed.com/buzzfeed-static/static/2016-07/22/18/campaign_images/buzzfeed-prod-fastlane01/michael-scott-quotes-that-are-still-hilarious-2-10277-1469225647-3_dblbig.jpg",
+        "clicked": false
     },
     {
         "id": 5,
-        "image": "http://static.tvtome.com/images/genie_images/news_hub/uploaded/NicholasCampbnews136514658348/oscar.jpg"
+        "image": "http://static.tvtome.com/images/genie_images/news_hub/uploaded/NicholasCampbnews136514658348/oscar.jpg",
+        "clicked": false
     },
     {
         "id": 6,
-        "image": "https://78.media.tumblr.com/65683398cebcf38ce66b75fc9a4cd955/tumblr_n7hmld8ktM1s6205uo1_500.jpg"
+        "image": "https://78.media.tumblr.com/65683398cebcf38ce66b75fc9a4cd955/tumblr_n7hmld8ktM1s6205uo1_500.jpg",
+        "clicked": false
     },
     {
         "id": 7,
-        "image": "https://img.buzzfeed.com/buzzfeed-static/static/2015-10/6/8/campaign_images/webdr07/someone-calculated-how-much-money-jim-spent-prank-2-3018-1444134583-0_dblbig.jpg"
+        "image": "https://img.buzzfeed.com/buzzfeed-static/static/2015-10/6/8/campaign_images/webdr07/someone-calculated-how-much-money-jim-spent-prank-2-3018-1444134583-0_dblbig.jpg",
+        "clicked": false
     },
     {
         "id": 8,
-        "image": "https://img.buzzfeed.com/buzzfeed-static/static/2015-10/6/8/campaign_images/webdr07/someone-calculated-how-much-money-jim-spent-prank-2-3018-1444134583-0_dblbig.jpg"
+        "image": "https://img.buzzfeed.com/buzzfeed-static/static/2015-10/6/8/campaign_images/webdr07/someone-calculated-how-much-money-jim-spent-prank-2-3018-1444134583-0_dblbig.jpg",
+        "clicked": false
     },
     {
         "id": 9,
-        "image": "https://img.buzzfeed.com/buzzfeed-static/static/2015-10/6/8/campaign_images/webdr07/someone-calculated-how-much-money-jim-spent-prank-2-3018-1444134583-0_dblbig.jpg"
+        "image": "https://img.buzzfeed.com/buzzfeed-static/static/2015-10/6/8/campaign_images/webdr07/someone-calculated-how-much-money-jim-spent-prank-2-3018-1444134583-0_dblbig.jpg",
+        "clicked": false
     },
     {
         "id": 10,
-        "image": "https://img.buzzfeed.com/buzzfeed-static/static/2015-10/6/8/campaign_images/webdr07/someone-calculated-how-much-money-jim-spent-prank-2-3018-1444134583-0_dblbig.jpg"
+        "image": "https://img.buzzfeed.com/buzzfeed-static/static/2015-10/6/8/campaign_images/webdr07/someone-calculated-how-much-money-jim-spent-prank-2-3018-1444134583-0_dblbig.jpg",
+        "clicked": false
     },
     {
         "id": 11,
-        "image": "https://img.buzzfeed.com/buzzfeed-static/static/2015-10/6/8/campaign_images/webdr07/someone-calculated-how-much-money-jim-spent-prank-2-3018-1444134583-0_dblbig.jpg"
+        "image": "https://img.buzzfeed.com/buzzfeed-static/static/2015-10/6/8/campaign_images/webdr07/someone-calculated-how-much-money-jim-spent-prank-2-3018-1444134583-0_dblbig.jpg",
+        "clicked": false
     },
     {
         "id": 12,
-        "image": "https://img.buzzfeed.com/buzzfeed-static/static/2015-10/6/8/campaign_images/webdr07/someone-calculated-how-much-money-jim-spent-prank-2-3018-1444134583-0_dblbig.jpg"
+        "image": "https://img.buzzfeed.com/buzzfeed-static/static/2015-10/6/8/campaign_images/webdr07/someone-calculated-how-much-money-jim-spent-prank-2-3018-1444134583-0_dblbig.jpg",
+        "clicked": false
     }
 ]

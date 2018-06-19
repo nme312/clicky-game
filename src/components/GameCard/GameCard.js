@@ -4,7 +4,7 @@ import "./GameCard.css"
 const GameCard = props => (
     <div className="card" id={props.id}
         onClick={() => {
-            props.clickChk(props.id);
+            props.clickChk(props.clicked);
             props.randomizer();
         }}
     >
