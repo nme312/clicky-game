@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import GameCard from "./components/GameCard"
 import Container from "./components/Container"
 import Row from "./components/Row"
-import Header from "./components/Header"
 import Title from "./components/Title"
 import Scores from "./components/Scores"
 import Cards from "./components/Cards"
+import Footer from "./components/Footer"
 import cards from "./cards.json"
 import './App.css'
 
@@ -14,14 +14,23 @@ class App extends Component {
     cards,
     score: 0,
     topScore: 0
-
   }
 
-  clickChk = (clicked) => {
-    if (!clicked) {
-      clicked = true;
+  clickChk = (index) => {
+    let cardsClone = [...this.state.cards];
+
+    if (!this.state.cards[index].clicked) {
+      cardsClone[index].clicked = true
+      this.setState({ cards: cardsClone })
+      // this.setState({score: score++})
+    } else {
+      cardsClone.forEach(card => card.clicked = false)
+      this.setState({ score: 0, cards: cardsClone })
     }
 
+    // if(this.state.topScore < this.state.score) {
+    //   this.setState({topScore: this.state.score})
+    // }
   }
 
   remove = (array, element) => {
@@ -52,27 +61,28 @@ class App extends Component {
 
   render() {
     return (
-      <Container>
-        <Row>
-          <Header>
-            <Title>Clicky Game</Title>
-            <Scores>Score: {this.state.score} | Top Score: {this.state.topScore}</Scores>
-          </Header>
-        </Row>
-        <Row>
-          <Cards>
-            {this.state.cards.map(card => (
-              <GameCard
-                id={card.id}
-                key={card.id}
-                image={card.image}
-                clickChk={this.clickChk}
-                randomizer={this.randomizer}
-              />
-            ))}
-          </Cards>
-        </Row>
-      </Container>
+      <div>
+        <Container>
+          <Row>
+            <Title><h1>Clicky Game</h1></Title>
+            <Scores><h4>Score: {this.state.score} | Top Score: {this.state.topScore}</h4> </Scores>
+          </Row>
+          <Row>
+            <Cards>
+              {this.state.cards.map(card => (
+                <GameCard
+                  id={card.id}
+                  key={card.id}
+                  image={card.image}
+                  clickChk={() => this.clickChk(card.id - 1)}
+                  randomizer={this.randomizer}
+                />
+              ))}
+            </Cards>
+          </Row>
+        </Container>
+        <Footer><span>test</span></Footer>
+      </div>
     )
   }
 }
