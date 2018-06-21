@@ -17,24 +17,27 @@ class App extends Component {
   }
 
   clickChk = (index) => {
-    let cardsClone = [...this.state.cards];
+    let cardsClone = [...this.state.cards]
 
     if (!this.state.cards[index].clicked) {
       cardsClone[index].clicked = true
       this.setState({ cards: cardsClone })
-      // this.setState({score: score++})
+      this.setState({ score: this.state.score + 1 })
     } else {
       cardsClone.forEach(card => card.clicked = false)
-      this.setState({ score: 0, cards: cardsClone })
+      this.setState({
+        score: 0,
+        cards: cardsClone
+      })
     }
 
-    // if(this.state.topScore < this.state.score) {
-    //   this.setState({topScore: this.state.score})
-    // }
+    if (this.state.topScore < this.state.score) {
+      this.setState({ topScore: this.state.score })
+    }
   }
 
   remove = (array, element) => {
-    const index = array.indexOf(element);
+    const index = array.indexOf(element)
     array.splice(index, 1);
   }
 
@@ -47,15 +50,14 @@ class App extends Component {
 
       // Pick a remaining element...
       randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
+      currentIndex -= 1
 
       // And swap it with the current element.
       temporaryValue = oldArr[currentIndex];
       oldArr[currentIndex] = oldArr[randomIndex];
       oldArr[randomIndex] = temporaryValue;
     }
-    console.log(oldArr);
-
+    console.log(oldArr)
     this.setState({ cards: oldArr })
   }
 
