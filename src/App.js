@@ -31,14 +31,9 @@ class App extends Component {
       })
     }
 
-    if (this.state.topScore < this.state.score) {
+    if (this.state.score > this.state.topScore) {
       this.setState({ topScore: this.state.score })
     }
-  }
-
-  remove = (array, element) => {
-    const index = array.indexOf(element)
-    array.splice(index, 1);
   }
 
   randomizer = () => {
@@ -83,7 +78,7 @@ class App extends Component {
             </Cards>
           </Row>
         </Container>
-        <Footer><span>test</span></Footer>
+        <Footer><span></span></Footer>
       </div>
     )
   }
